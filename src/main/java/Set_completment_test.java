@@ -8,10 +8,10 @@ import java.util.Set;
 public class Set_completment_test {
 
     public static void main(String[] args) {
-        String itemset_string = "1-2-3";
-        String sub_itemset_string = "1-";
-        String elementsA[] = itemset_string.split("-");
-        String elementsB[] = sub_itemset_string.split("-");
+        String itemset_string = "1;2;3;";
+        String sub_itemset_string = "1;";
+        String elementsA[] = itemset_string.split(";");
+        String elementsB[] = sub_itemset_string.split(";");
         Set<String> set_A = new HashSet<String>(Arrays.asList(elementsA));
         Set<String> set_B = new HashSet<String>(Arrays.asList(elementsB));
 
@@ -19,9 +19,9 @@ public class Set_completment_test {
         String result = set_A
                 .toString()
                 .replaceAll("\\s+|\\[|\\]","")
-                .replaceAll(",","-");
+                .replaceAll(",",";");
 
-        String result2 = result + "-";
+        String result2 = result + ";";
         System.out.println(result2);
     }
 }
